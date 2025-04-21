@@ -1,0 +1,25 @@
+@import url("./fonts.css");
+@import url("./navbar.css");
+@import url("./search.css");
+@import url("./home.css");
+
+body {
+  font-family: 'Inter-24pt', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}

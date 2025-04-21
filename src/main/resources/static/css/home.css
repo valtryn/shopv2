@@ -1,0 +1,95 @@
+.banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 320px;
+    margin-top: 48px;
+    background-color: #d9d9d9;
+}
+
+.welcome {
+    font-family: 'CrimsonPro';
+    font-size: 60px;
+    font-weight: 900;
+}
+
+.sub-message {
+    font-family: 'PinyonScript';
+    font-size: 40px;
+}
+
+.categories-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.categories-label {
+    font-size: 40px;
+    font-weight: 900;
+    margin-bottom: 1rem;
+}
+
+.category-list {
+    display: flex;
+    gap: 1rem;
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    width:  300px;
+    height: 450px;
+    background-color: #d9d9d9;
+    margin-bottom: 5rem;
+}
+.category-type {
+    margin-top: auto;
+    font-size: 24px;
+    font-width: 300;
+    width: 100%;
+    padding-left: 12px;
+    padding-bottom: 12px;
+}
+
+.category.bracelets {
+    background-image: url("../images/bracelet.png");
+    background-repeat: no-repeat; /* Don't tile the image */
+    background-position: center;  /* Center the image */
+    background-size: cover;
+}
+
+.category.earrings {
+    background-image: url("../images/earring.png");
+    background-repeat: no-repeat; /* Don't tile the image */
+    background-position: center;  /* Center the image */
+    background-size: cover;
+}
+
+.category.necklaces {
+    background-image: url("../images/necklace.png");
+    background-repeat: no-repeat; /* Don't tile the image */
+    background-position: center;  /* Center the image */
+    background-size: cover;
+}
+
+.category.rings {
+    background-image: url("../images/ring.png");
+    background-repeat: no-repeat; /* Don't tile the image */
+    background-position: center;  /* Center the image */
+    background-size: cover;
+}
+
+.category:hover {
+    opacity: 0.95;
+    outline: 1px solid #818181;
+}
+
+.category:hover .category-type {
+    font-weight: 500;
+}
+

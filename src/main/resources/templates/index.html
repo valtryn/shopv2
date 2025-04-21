@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/normalize.css}">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+    <title th:text="'Glimora | ' + ${title}"></title>
+</head>
+     <body>
+         <div class="container">
+             <nav th:replace="~{fragments/navbar :: navbar}"></nav>
+             <div th:replace="~{fragments/search :: search}"></div>
+
+             <!-- HOME -->
+             <div class="content" th:if="${contentType == 'home'}">
+                 <div th:replace="~{fragments/home :: banner}"></div>
+                 <div th:replace="~{fragments/home :: categories}"></div>
+             </div>
+             <!-- CATALOG -->
+             <div class="content" th:if="${contentType == 'catalog'}">
+                 <div th:replace="~{fragments/catalog :: catalog}"></div>
+             </div>
+         </div>
+     </body>
+</html>
