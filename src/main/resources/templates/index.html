@@ -13,6 +13,8 @@
              <nav th:replace="~{fragments/navbar :: navbar}"></nav>
              <div th:replace="~{fragments/search :: search}"></div>
 
+             <div class="division"></div>
+
              <!-- HOME -->
              <div class="content" th:if="${contentType == 'home'}">
                  <div th:replace="~{fragments/home :: banner}"></div>

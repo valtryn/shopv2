@@ -1,3 +1,90 @@
 <div class="catalog-container" xmlns:th="http://www.thymeleaf.org" th:fragment="catalog">
-    <h2 class="catalog-name" th:text="${productName}"></h2>
+    <div class="controls">
+        <label for="sort">SORT BY : </label>
+        <select id="sort" name="sort">
+            <option value="low">PRICE :  LOW - HIGH</option>
+            <option value="high">PRICE :  HIGH - LOW</option>
+        </select>
+        <img th:src="@{/images/chevron-down.svg}" alt="User">
+    </div>
+    <div class="item-row">
+        <div class="items">
+            <button class="add-to-cart">Add to cart</button>
+        </div>
+        <div class="items">
+            <button class="add-to-cart">Add to cart</button>
+        </div>
+        <div class="items">
+            <button class="add-to-cart">Add to cart</button>
+        </div>
+        <div class="items">
+            <button class="add-to-cart">Add to cart</button>
+        </div>
+        <div class="items">
+            <button class="add-to-cart">Add to cart</button>
+        </div>
+        <div class="items">
+            <button class="add-to-cart">Add to cart</button>
+        </div>
+    </div>
+    <div class="item-row">
+        <div class="items">
+            <button class="add-to-cart">Add to cart</button>
+        </div>
+        <div class="items">
+            <button class="add-to-cart">Add to cart</button>
+        </div>
+        <div class="items">
+            <button class="add-to-cart">Add to cart</button>
+        </div>
+        <div class="items">
+            <button class="add-to-cart">Add to cart</button>
+        </div>
+        <div class="items">
+            <button class="add-to-cart">Add to cart</button>
+        </div>
+        <div class="items">
+            <button class="add-to-cart">Add to cart</button>
+        </div>
+    </div>
+    <div class="item-row">
+        <div class="items">
+            <button class="add-to-cart">Add to cart</button>
+        </div>
+        <div class="items">
+            <button class="add-to-cart">Add to cart</button>
+        </div>
+        <div class="items">
+            <button class="add-to-cart">Add to cart</button>
+        </div>
+        <div class="items">
+            <button class="add-to-cart">Add to cart</button>
+        </div>
+        <div class="items">
+            <button class="add-to-cart">Add to cart</button>
+        </div>
+        <div class="items">
+            <button class="add-to-cart">Add to cart</button>
+        </div>
+    </div>
+    <div class="item-row">
+        <div class="items">
+            <button class="add-to-cart">Add to cart</button>
+        </div>
+        <div class="items">
+            <button class="add-to-cart">Add to cart</button>
+        </div>
+        <div class="items">
+            <button class="add-to-cart">Add to cart</button>
+        </div>
+        <div class="items">
+            <button class="add-to-cart">Add to cart</button>
+        </div>
+        <div class="items">
+            <button class="add-to-cart">Add to cart</button>
+        </div>
+        <div class="items">
+            <button class="add-to-cart">Add to cart</button>
+        </div>
+    </div>
 </div>
