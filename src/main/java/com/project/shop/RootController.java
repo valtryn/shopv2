@@ -1,13 +1,12 @@
 package com.project.shop;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.ui.Model;
+import org.springframework.util.StringUtils;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.server.ResponseStatusException;
-
-//TODO: create a dynamic url controller for products
 
 @Controller
 public class RootController {
@@ -30,7 +29,7 @@ public class RootController {
             name.equalsIgnoreCase("necklaces") ||
             name.equalsIgnoreCase("bracelets"))
         {
-            model.addAttribute("title", name);
+            model.addAttribute("title", StringUtils.capitalize(name));
             model.addAttribute("contentType", "catalog");
             model.addAttribute("node", name.toLowerCase());
             model.addAttribute("nodeName", name.toUpperCase());
@@ -39,6 +38,7 @@ public class RootController {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }
     }
+
     @GetMapping("/categories")
     public String categories(Model model) {
         return "redirect:/home";

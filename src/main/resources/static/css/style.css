@@ -4,6 +4,7 @@
 @import url("./home.css");
 @import url("./catalog.css");
 @import url("./navigate.css");
+@import url("./cart.css");
 
 body {
   font-family: 'Inter-24pt', sans-serif;
