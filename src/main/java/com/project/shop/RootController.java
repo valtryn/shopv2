@@ -23,7 +23,7 @@ public class RootController {
         return "index";
     }
 
-    @GetMapping("/products/{name}")
+    @GetMapping("/categories/{name}")
     public String catalog(@PathVariable String name, Model model) {
         if (name.equalsIgnoreCase("rings")     ||
             name.equalsIgnoreCase("earrings")  ||
@@ -32,11 +32,16 @@ public class RootController {
         {
             model.addAttribute("title", name);
             model.addAttribute("contentType", "catalog");
-            model.addAttribute("productName", name.toUpperCase());
+            model.addAttribute("node", name.toLowerCase());
+            model.addAttribute("nodeName", name.toUpperCase());
             return "index";
         } else {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND);
         }
+    }
+    @GetMapping("/categories")
+    public String categories(Model model) {
+        return "redirect:/home";
     }
     
     @GetMapping("/account")
@@ -49,14 +54,14 @@ public class RootController {
     @GetMapping("/cart")
     public String cart(Model model) {
         model.addAttribute("title", "Cart");
-        model.addAttribute("contentType", "account");
+        model.addAttribute("contentType", "cart");
         return "index";
     }
 
     @GetMapping("/checkout")
     public String checkout(Model model) {
         model.addAttribute("title", "Checkout");
-        model.addAttribute("contentType", "account");
+        model.addAttribute("contentType", "checkout");
         return "index";
     }
 }

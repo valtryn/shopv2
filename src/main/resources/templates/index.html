@@ -22,7 +22,38 @@
              </div>
              <!-- CATALOG -->
              <div class="content" th:if="${contentType == 'catalog'}">
+                 <span class="navigate">
+                     <a href="/home" class="navigate-nodes">HOME</a>
+                     <img th:src="@{/images/chevron-right.svg}" alt="User">
+                     <a href="/categories" class="navigate-nodes">CATEGORIES</a>
+                     <img th:src="@{/images/chevron-right.svg}" alt="User">
+                     <a th:href="@{/categories/{name}(name=${node})}" class="navigate-nodes" th:text="${nodeName}"></a>
+                 </span>
                  <div th:replace="~{fragments/catalog :: catalog}"></div>
+             </div>
+             <!-- ACCOUNT -->
+             <div class="content" th:if="${contentType == 'account'}">
+                 <span class="navigate">
+                     <a href="/home" class="navigate-nodes">HOME</a>
+                     <img th:src="@{/images/chevron-right.svg}" alt="User">
+                     <a href="/account" class="navigate-nodes">ACCOUNT</a>
+                 </span>
+             </div>
+             <!-- CART -->
+             <div class="content" th:if="${contentType == 'cart'}">
+                 <span class="navigate">
+                     <a href="/home" class="navigate-nodes">HOME</a>
+                     <img th:src="@{/images/chevron-right.svg}" alt="User">
+                     <a href="cart" class="navigate-nodes">CART</a>
+                 </span>
+             </div>
+             <!-- CHECKOUT -->
+             <div class="content" th:if="${contentType == 'checkout'}">
+                 <span class="navigate">
+                     <a href="/home" class="navigate-nodes">HOME</a>
+                     <img th:src="@{/images/chevron-right.svg}" alt="User">
+                     <a href="/checkout" class="navigate-nodes">CHECKOUT</a>
+                 </span>
              </div>
          </div>
      </body>

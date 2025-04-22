@@ -38,9 +38,6 @@
     gap: 1rem;
 }
 
-.category-link {
-}
-
 .category {
     display: flex;
     flex-direction: column;
