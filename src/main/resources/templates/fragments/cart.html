@@ -1,59 +1,21 @@
 <div class="cart-container" xmlns:th="http://www.thymeleaf.org" th:fragment="cart">
-    <div class="cart-table-header">
-        <div class="label" id="product">Product  </div>
-        <div class="label" id="price">Price      </div>
-        <div class="label" id="quantity">Quantity</div>
-        <div class="label" id="fee">Shipping Fee </div>
-        <div class="label" id="item-total">Total </div>
-        <div class="label" id="remove">Remove    </div>
-    </div>
-    <div class="value">
-        <div class="label" id="product">exmplaesdasdasdas</div>
-        <div class="label" id="price">1000</div>
-        <div class="label" id="quantity">1</div>
-        <div class="label" id="fee">10</div>
-        <div class="label" id="item-total">1010</div>
-        <div class="label" id="remove"></div>
-    </div>
-    <div class="value">
-        <div class="label" id="product">exmplaesdasdasdas</div>
-        <div class="label" id="price">1000</div>
-        <div class="label" id="quantity">1</div>
-        <div class="label" id="fee">10</div>
-        <div class="label" id="item-total">1010</div>
-        <div class="label" id="remove"></div>
-    </div>
-    <div class="value">
-        <div class="label" id="product">exmplaesdasdasdas</div>
-        <div class="label" id="price">1000</div>
-        <div class="label" id="quantity">1</div>
-        <div class="label" id="fee">10</div>
-        <div class="label" id="item-total">1010</div>
-        <div class="label" id="remove"></div>
-    </div>
-    <div class="value">
-        <div class="label" id="product">exmplaesdasdasdas</div>
-        <div class="label" id="price">1000</div>
-        <div class="label" id="quantity">1</div>
-        <div class="label" id="fee">10</div>
-        <div class="label" id="item-total">1010</div>
-        <div class="label" id="remove"></div>
-    </div>
-    <div class="value">
-        <div class="label" id="product">exmplaesdasdasdas</div>
-        <div class="label" id="price">1000</div>
-        <div class="label" id="quantity">1</div>
-        <div class="label" id="fee">10</div>
-        <div class="label" id="item-total">1010</div>
-        <div class="label" id="remove"></div>
-    </div>
-    <div class="value">
-        <div class="label" id="product">exmplaesdasdasdas</div>
-        <div class="label" id="price">1000</div>
-        <div class="label" id="quantity">1</div>
-        <div class="label" id="fee">10</div>
-        <div class="label" id="item-total">1010</div>
-        <div class="label" id="remove"></div>
-    </div>
+    <table class="cart-table">
+        <tr>
+            <th class="header-product">Product</th>
+            <th class="header-price">Price</th>
+            <th class="header-quantity">Quantity</th>
+            <th class="header-fee">Shipping Fee</th>
+            <th class="header-total">Total</th>
+            <th class="header-remove">Remove</th>
+        </tr>
+        <tr>
+            <td class="value-product">Alice</td>
+            <td class="value-price">1000</td>
+            <td class="value-quantity">1</td>
+            <td class="value-fee">10</td>
+            <td class="value-total">1010</td>
+            <td class="value-remove">X</td>
+        </tr>
+    </table>
     <a href="/checkout"><div class="table-checkout"><span>CHECKOUT</span></div></a>
 </div>
