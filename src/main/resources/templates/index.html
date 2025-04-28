@@ -30,7 +30,7 @@
                      <img th:src="@{/images/chevron-right.svg}" alt="User">
                      <a th:href="@{/categories/{name}(name=${node})}" class="navigate-nodes" th:text="${nodeName}"></a>
                  </span>
-                 <div th:replace="~{fragments/catalog :: catalog}"></div>
+                 <div th:replace="~{fragments/catalog :: catalog(category=${node})}"></div>
              </div>
              <!-- ACCOUNT -->
              <div class="content" th:if="${contentType == 'account'}">
@@ -56,6 +56,17 @@
                      <img th:src="@{/images/chevron-right.svg}" alt="User">
                      <a href="/checkout" class="navigate-nodes">CHECKOUT</a>
                  </span>
+             </div>
+             <!-- LOGIN -->
+             <div class="content" th:if="${contentType == 'login'}">
+                 <span class="navigate">
+                     <a href="/home" class="navigate-nodes">HOME</a>
+                     <img th:src="@{/images/chevron-right.svg}" alt="User">
+                     <a href="/account" class="navigate-nodes">ACCOUNT</a>
+                     <img th:src="@{/images/chevron-right.svg}" alt="User">
+                     <a href="/account/login" class="navigate-nodes">LOGIN</a>
+                 </span>
+                 <div th:replace="~{fragments/login :: login}"></div>
              </div>
          </div>
      </body>

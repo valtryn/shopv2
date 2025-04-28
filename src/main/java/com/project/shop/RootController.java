@@ -64,4 +64,18 @@ public class RootController {
         model.addAttribute("contentType", "checkout");
         return "index";
     }
+
+    @GetMapping("/account/login")
+    public String login(Model model) {
+        model.addAttribute("title", "Login");
+        model.addAttribute("contentType", "login");
+        return "index";
+    }
+
+    @GetMapping("/account/signup")
+    public String signup(Model model) {
+        model.addAttribute("title", "Login");
+        model.addAttribute("contentType", "signup");
+        return "index";
+    }
 }
